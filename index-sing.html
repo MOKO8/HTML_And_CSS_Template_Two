@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Icons From Font Awesome -->
+    <link rel="stylesheet" href="css/all.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(90deg, #647e7f, #f5f5f5);
+            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Small */
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        /* Medium */
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        /* Large */
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        .container .form {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        @media (max-width:767px) {
+            .container .form {
+                width: 95%;
+            }
+        }
+
+        .form hr {
+            border: solid 0.1px #647e7f;
+        }
+
+        .form .info input {
+            display: block;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            transition: 0.2s;
+            padding: 0px 10px;
+            background-color: #f5f5f5;
+        }
+
+        .form .info input:hover {
+            border: solid 0.5px #647e7f;
+        }
+
+        .container .form .sex {
+            display: grid;
+            grid-template-columns: 60px 60px 60px;
+            row-gap: 20px;
+            column-gap: 10px;
+            color: #141f1e;
+            margin: 60px 0 ;
+            font-size: 20px;
+        }
+        .container .form .submt {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .container .form .submt textarea {
+            width: 80%;
+            height: 150px;
+            outline: none;
+            border: none;
+            background-color: #f5f5f5;
+            font-size: 18px;
+            padding: 20px;
+        }
+        .container .form .submt textarea:hover {
+            border: solid 0.5px #647e7f;
+        }
+        .container .form .submt button {
+            width: 100px;
+            height: 30px;
+            outline: none;
+            border: none;
+            background-image: linear-gradient(90deg, #f5f5f5, #f5f5f5,#647e7f );
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .container .form .submt button:hover {
+            border: solid 0.5px #647e7f;
+            background-image: linear-gradient(90deg, #f5f5f5,#647e7f,#647e7f );
+        }
+        .container .form .submt label {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        .footer {
+            background-color: #141f1e;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        @media (max-width: 767px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .footer button {
+            font-size: 18px;
+            background-image: linear-gradient(-90deg, #f5f5f5, #647e7f);
+            color: #141f1e;
+            outline: none;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .footer button:hover {
+            border: solid 0.5px #647e7f; 
+        }
+        .footer i {
+            color: #f5f5f5;
+            font-size: 30px;
+        }
+        .footer i:hover {
+            box-shadow: 0 0 8px 1px #f5f5f5;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-size: 20px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <title>التسجيل</title>
+</head>
+
+<body style="direction: rtl">
+    <div class="container">
+        <h1>للتسجيل الرجاء اتباع الخطوات الاتية بصحة</h1>
+        <div class="form">
+            <form action="" class="info">
+                <input type="name" placeholder="الاسم" />
+                <input type="number" placeholder="العمر" />
+                <input type="number" placeholder="رقم الهوية" />
+                <input type="email" placeholder="البريد الالكتروني" />
+                <input type="password" placeholder="الرمز السري" />
+                <hr />
+            </form>
+            <form action="" class="sex">
+                <input type="radio" id="man" name="sex-determination" value="man" />
+                <label for="man">man</label><br />
+                <input type="radio" name="sex-determination" id="womn" value="womn" />
+                <label for="womn">womn</label><br />
+                <input type="radio" id="child" name="sex-determination" value="child" />
+                <label for="child">child</label>
+            </form>
+            <form action="" class="submt">
+                <label for="text">الرجاء ارفاق رسالتك هنا</label><br />
+                <textarea name="text" id="text" placeholder="(معروض) ارسال رسالة"></textarea><br />
+                <button type="submit">إرسال الرسالة</button><br>
+                <label for="complaint">لتقديم شكوى</label><br />
+                <textarea name="text" id="complaint" placeholder="تقديم شكوى"></textarea><br />
+                <button type="submit">إرسال الرسالة</button><br>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="icon">
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+        </div>
+        <a href="https://moko8.github.io/HTML_And_CSS_Design_TEmplate_Two_From_Elzero/">www.moko8.github</a>
+        <button type="submit">إرسال الملف الشخصي</button>
+        <button type="reset">إعادة كتابة الملف الشخصي</button>
+    </div>
+</body>
+
+</html>
